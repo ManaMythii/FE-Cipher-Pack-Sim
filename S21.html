@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>FE Cipher Pack Opening Simulator</title>
+<link rel="icon" type="image/x-icon" href="/FE-Cipher-Pack-Sim/img/favicon.png">
+	
+<style>
+body{
+	font-family: Verdana, sans-serif;
+	background-image: url('/FE-Cipher-Pack-Sim/img/navyBG2.jpg');
+}
+.flip-card {
+  background-color: transparent;
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 230px;
+  padding-left: 16px;
+  padding-right: 16px;
+  float: left;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip {
+     transform: rotateY(180deg);
+ }
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.button {
+  background-color: rgba(0,0,0,.6);
+  border: 2px solid black;
+  color: white;
+  border-radius: 25px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 142px;
+  height: 52px;
+  cursor: pointer;
+}
+
+.dd{
+  position: relative;
+  display: inline-block;
+}
+
+.ddButton{
+  background-color: rgba(0,0,0,.5);
+  border: 2px solid black;
+  color: white;
+  border-radius: 25px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 142px;
+  height: 52px;
+  cursor: pointer;
+}
+
+.ddContent{
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.ddContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 150px;
+}
+
+.ddContent a:hover {background-color: #ddd;}
+.dd:hover .ddContent {display: block;}
+.dd:hover .ddButton {background-color: #6D8A96;}
+
+.banner{
+	background-image: url('/FE-Cipher-Pack-Sim/img/testImage2.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 2px solid black;
+	border-radius: 25px;
+	border: 2px solid black;
+}
+mark{
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.bannerLabel{
+	background-color: rgba(0,0,0,.5);
+	color:white;
+	margin-left:500px;
+	margin-right:500px;
+	border-radius: 25px;
+	
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+	<div class="banner">
+		<div class="dd">
+			<button class="ddButton">Boosters</button>
+			<div class="ddContent">
+				<a href="index">Booster Series 22</a>
+				<a href="test">Booster Series 21</a>
+				<a href="#">Booster Series 20</a>
+			</div>
+		</div>
+		
+		<div class="bannerLabel">
+		<div style="text-align:center"><b><u>Fire Emblem Cipher Pack Opening Simulator</u></b></div>
+		<h1 style="text-align:center">Booster Series 21: Tempest of Apocalyptic Flame</h1>
+	
+		<p style="text-align:center"><b>Click the cards or "Flip All" to reveal. Click "New Pack" to get a new card pack.</b></p>
+		</div>
+		<div style="margin-left:42%">
+			<button type="button" class="button" onclick="window.location.reload()">New Pack</button>
+			<button type="button" class="button" onclick="flipAll()">Flip All</button>
+		</div>
+	</div>
+	
+	<div style="margin-left:100px">
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+				<div class="flip-card-back">
+					<img class="image"src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+				<div class="flip-card-back">
+					<img class="image"src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+				<div class="flip-card-back">
+					<img class="image"src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+				<div class="flip-card-back">
+					<img class="image"src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+				<div class="flip-card-back">
+					<img class="image"src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+				<div class="flip-card-back">
+					<img class="image"src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+				<div class="flip-card-back">
+					<img class="image"src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+				<div class="flip-card-back">
+					<img class="image"src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+				<div class="flip-card-back">
+					<img class="image"src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+				<div class="flip-card-back">
+					<img class="image"src="https://s3-wiki.serenesforest.net/1/1a/S22Sleeve1.png">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<script>
+	cards = document.getElementsByClassName("flip-card-inner");
+	var flip = function() {
+	this.classList.toggle("flip")
+	};
+	var poolN = Array("https://s3-wiki.serenesforest.net/6/65/B22-089.png", "https://s3-wiki.serenesforest.net/b/b1/B22-091.png", "https://s3-wiki.serenesforest.net/1/15/B22-093.png", "https://s3-wiki.serenesforest.net/d/d0/B22-095.png", "https://s3-wiki.serenesforest.net/c/c7/B22-097.png", "https://s3-wiki.serenesforest.net/1/11/B22-099.png", "https://s3-wiki.serenesforest.net/0/02/B22-088.png", "https://s3-wiki.serenesforest.net/0/06/B22-086.png", "https://s3-wiki.serenesforest.net/c/cf/B22-082.png", "https://s3-wiki.serenesforest.net/b/b2/B22-080.png", "https://s3-wiki.serenesforest.net/1/1c/B22-076.png", "https://s3-wiki.serenesforest.net/0/06/B22-075.png", "https://s3-wiki.serenesforest.net/0/0c/B22-073.png", "https://s3-wiki.serenesforest.net/2/27/B22-071.png", "https://s3-wiki.serenesforest.net/4/43/B22-070.png", "https://s3-wiki.serenesforest.net/9/94/B22-068.png", "https://s3-wiki.serenesforest.net/8/81/B22-066.png", "https://s3-wiki.serenesforest.net/e/e0/B22-065.png", "https://s3-wiki.serenesforest.net/0/00/B22-063.png", "https://s3-wiki.serenesforest.net/8/8e/B22-061.png", "https://s3-wiki.serenesforest.net/b/b8/B22-060.png", "https://s3-wiki.serenesforest.net/d/d0/B22-058.png", "https://s3-wiki.serenesforest.net/2/25/B22-055.png", "https://s3-wiki.serenesforest.net/9/92/B22-054.png", "https://s3-wiki.serenesforest.net/c/cc/B22-052.png", "https://s3-wiki.serenesforest.net/1/1c/B22-050.png", "https://s3-wiki.serenesforest.net/3/35/B22-048.png", "https://s3-wiki.serenesforest.net/7/7a/B22-046.png", "https://s3-wiki.serenesforest.net/1/1e/B22-045.png", "https://s3-wiki.serenesforest.net/4/4d/B22-044.png", "https://s3-wiki.serenesforest.net/6/60/B22-043.png", "https://s3-wiki.serenesforest.net/0/0e/B22-040.png", "https://s3-wiki.serenesforest.net/1/1f/B22-039.png", "https://s3-wiki.serenesforest.net/b/b6/B22-037.png", "https://s3-wiki.serenesforest.net/9/9d/B22-035.png", "https://s3-wiki.serenesforest.net/0/0d/B22-034.png", "https://s3-wiki.serenesforest.net/9/9e/B22-031.png", "https://s3-wiki.serenesforest.net/8/8e/B22-029.png", "https://s3-wiki.serenesforest.net/2/28/B22-028.png", "https://s3-wiki.serenesforest.net/b/be/B22-026.png", "https://s3-wiki.serenesforest.net/2/2a/B22-023.png", "https://s3-wiki.serenesforest.net/0/06/B22-021.png", "https://s3-wiki.serenesforest.net/d/d6/B22-018.png", "https://s3-wiki.serenesforest.net/c/c2/B22-014.png", "https://s3-wiki.serenesforest.net/0/09/B22-103.png", "https://s3-wiki.serenesforest.net/0/06/B22-105.png");
+	var poolHN = Array("https://s3-wiki.serenesforest.net/2/2b/B22-096.png", "https://s3-wiki.serenesforest.net/6/62/B22-098.png", "https://s3-wiki.serenesforest.net/4/41/B22-085.png", "https://s3-wiki.serenesforest.net/b/b5/B22-084.png", "https://s3-wiki.serenesforest.net/b/b2/B22-083.png", "https://s3-wiki.serenesforest.net/e/e9/B22-079.png", "https://s3-wiki.serenesforest.net/3/35/B22-078.png", "https://s3-wiki.serenesforest.net/6/6e/B22-077.png", "https://s3-wiki.serenesforest.net/2/23/B22-067.png", "https://s3-wiki.serenesforest.net/3/3b/B22-059.png", "https://s3-wiki.serenesforest.net/7/73/B22-057.png", "https://s3-wiki.serenesforest.net/d/d7/B22-056.png", "https://s3-wiki.serenesforest.net/f/f6/B22-049.png", "https://s3-wiki.serenesforest.net/e/ed/B22-036.png", "https://s3-wiki.serenesforest.net/1/1a/B22-033.png", "https://s3-wiki.serenesforest.net/d/d3/B22-032.png", "https://s3-wiki.serenesforest.net/d/db/B22-030.png", "https://s3-wiki.serenesforest.net/e/ef/B22-027.png", "https://s3-wiki.serenesforest.net/1/1e/B22-025.png", "https://s3-wiki.serenesforest.net/c/c2/B22-024.png", "https://s3-wiki.serenesforest.net/6/69/B22-019.png", "https://s3-wiki.serenesforest.net/6/6d/B22-017.png", "https://s3-wiki.serenesforest.net/f/f3/B22-016.png", "https://s3-wiki.serenesforest.net/4/4c/B22-101.png", "https://s3-wiki.serenesforest.net/e/e6/B22-104.png", "https://s3-wiki.serenesforest.net/c/ca/B22-106.png", "https://s3-wiki.serenesforest.net/1/14/B22-108.png", "https://s3-wiki.serenesforest.net/0/08/B22-109.png", "https://s3-wiki.serenesforest.net/8/84/B22-110.png", "https://s3-wiki.serenesforest.net/4/4c/B22-111.png", "https://s3-wiki.serenesforest.net/6/61/B22-112.png", "https://s3-wiki.serenesforest.net/6/65/B22-113.png", "https://s3-wiki.serenesforest.net/3/36/B22-114.png", "https://s3-wiki.serenesforest.net/5/55/B22-115.png");
+	var poolR = Array("https://s3-wiki.serenesforest.net/4/49/B22-090.png", "https://s3-wiki.serenesforest.net/a/ad/B22-092.png", "https://s3-wiki.serenesforest.net/d/d2/B22-094.png", "https://s3-wiki.serenesforest.net/1/12/B22-100.png", "https://s3-wiki.serenesforest.net/7/77/B22-087.png", "https://s3-wiki.serenesforest.net/c/ca/B22-081.png", "https://s3-wiki.serenesforest.net/5/54/B22-074.png", "https://s3-wiki.serenesforest.net/f/f5/B22-072.png", "https://s3-wiki.serenesforest.net/9/9d/B22-064.png", "https://s3-wiki.serenesforest.net/f/f8/B22-062.png", "https://s3-wiki.serenesforest.net/8/8f/B22-051.png", "https://s3-wiki.serenesforest.net/1/10/B22-042.png", "https://s3-wiki.serenesforest.net/0/0a/B22-041.png", "https://s3-wiki.serenesforest.net/2/29/B22-038.png", "https://s3-wiki.serenesforest.net/9/97/B22-022.png", "https://s3-wiki.serenesforest.net/a/a9/B22-020.png", "https://s3-wiki.serenesforest.net/a/ae/B22-015.png", "https://s3-wiki.serenesforest.net/2/22/B22-013.png", "https://s3-wiki.serenesforest.net/1/1e/B22-012.png", "https://s3-wiki.serenesforest.net/c/cc/B22-011.png", "https://s3-wiki.serenesforest.net/5/5b/B22-010.png", "https://s3-wiki.serenesforest.net/e/e1/B22-009.png", "https://s3-wiki.serenesforest.net/7/7f/B22-008.png", "https://s3-wiki.serenesforest.net/f/f4/B22-007.png", "https://s3-wiki.serenesforest.net/0/0c/B22-006.png", "https://s3-wiki.serenesforest.net/2/21/B22-005.png", "https://s3-wiki.serenesforest.net/5/5d/B22-004.png", "https://s3-wiki.serenesforest.net/3/32/B22-003.png", "https://s3-wiki.serenesforest.net/a/a0/B22-002.png", "https://s3-wiki.serenesforest.net/7/78/B22-001.png", "https://s3-wiki.serenesforest.net/4/41/B22-102.png", "https://s3-wiki.serenesforest.net/6/6a/B22-107.png");
+	for (var i = 0; i < cards.length; i++){
+		rand();
+		cards[i].addEventListener('click', flip, false); 
+	}
+	
+	function rand() {
+		cardImg = document.getElementsByClassName("image");
+		for (var i = 0; i < 6; i++){
+			cardImg[i].src = poolN[Math.floor(Math.random() * poolN.length)];
+		}
+		for (var i = 6; i < 9; i++){
+			cardImg[i].src = poolHN[Math.floor(Math.random() * poolHN.length)];
+		}
+		cardImg[9].src = poolR[Math.floor(Math.random() * poolR.length)];
+	}
+	function flipAll() {
+		for (var i = 0; i < cards.length; i++){
+			cards[i].classList.toggle("flip");
+		}
+	}
+	</script>
+	
+	
+
+</body>
+</html>
