@@ -8,10 +8,14 @@
 <style>
 body{
 	font-family: Verdana, sans-serif;
+	background-color: #8797B2;
+	<!--
+	background-color: #829CBC;
 	background-image: url('/FE-Cipher-Pack-Sim/img/background.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	-->
 }
 .flip-card {
   background-color: transparent;
@@ -56,7 +60,7 @@ body{
 }
 
 .button {
-  background-color: #8797B2;
+  background-color: rgba(0,0,0,.6);
   border: 2px solid black;
   color: white;
   border-radius: 25px;
@@ -75,7 +79,7 @@ body{
 }
 
 .ddButton{
-  background-color: #8797B2;
+  background-color: rgba(0,0,0,.5);
   border: 2px solid black;
   color: white;
   border-radius: 25px;
@@ -109,15 +113,28 @@ body{
 .dd:hover .ddButton {background-color: #6D8A96;}
 
 .banner{
-	background-image: url('https://pbs.twimg.com/media/EjLzHXHU0AAnx_L?format=jpg&name=large');
-	background-size: cover;
+	background-image: url('/FE-Cipher-Pack-Sim/img/22.png');
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	<!--background-color: #1D3461;-->
+	background-size: cover;
 	border: 2px solid black;
 	border-radius: 25px;
+	border: 2px solid black;
+}
+mark{
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  border-radius: 25px;
+  padding: 5px;
 }
 
+.bannerLabel{
+	background-color: rgba(0,0,0,.5);
+	color:white;
+	margin-left:500px;
+	margin-right:500px;
+	border-radius: 25px;
+	
+}
 
 
 </style>
@@ -129,17 +146,20 @@ body{
 
 	<div class="banner">
 		<div class="dd">
-			<button class="ddButton">Menu</button>
+			<button class="ddButton">Boosters</button>
 			<div class="ddContent">
 				<a href="#">Booster Series 22</a>
 				<a href="#">Booster Series 21</a>
 				<a href="#">Booster Series 20</a>
 			</div>
 		</div>
-		<span style="color:white">Fire Emblem Cipher Pack Opening Simulator</span>
-		<h1 style="text-align:center;color:white">Booster Series 22: The Heroes' Paean</h1>
+		
+		<div class="bannerLabel">
+		<div style="text-align:center"><b><u>Fire Emblem Cipher Pack Opening Simulator</u></b></div>
+		<h1 style="text-align:center">Booster Series 22: The Heroes' Paean</h1>
 	
-		<p style="text-align:center;color:white">Click the cards or "Flip All" to reveal. Click "New Pack" to get a new card pack.</p>
+		<p style="text-align:center"><b>Click the cards or "Flip All" to reveal. Click "New Pack" to get a new card pack.</b></p>
+		</div>
 		<div style="margin-left:42%">
 			<button type="button" class="button" onclick="window.location.reload()">New Pack</button>
 			<button type="button" class="button" onclick="flipAll()">Flip All</button>
