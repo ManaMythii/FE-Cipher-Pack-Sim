@@ -1,3 +1,3 @@
 # FE-Cipher-Pack-Sim
 This is a pack opening simulator for the Fire Emblem Cipher Card Game
-Last updated: May 29th, 2023
+Last updated: May 29, 2023
